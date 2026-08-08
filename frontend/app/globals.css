@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #0f172a;
+    --bg-card: #1e293b;
+    --brand-emerald: #10b981;
+    --brand-teal: #14b8a6;
+    --brand-amber: #f59e0b;
+  }
+
+  body {
+    background-color: #090d16;
+    color: #f8fafc;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'SolaimanLipi', 'Kalpurush', sans-serif;
+    min-height: 100vh;
+  }
+}
+
+.glass-panel {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 12px 30px -10px rgba(16, 185, 129, 0.15);
+  transform: translateY(-2px);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #059669 0%, #0d9488 100%);
+}
+
+.gradient-amber {
+  background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+}
+
+.badge-glow {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
