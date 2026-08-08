@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LABOUR.COM – Project Report</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+  
+  @page {
+    size: A4;
+    margin: 20mm 20mm 20mm 20mm;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+  }
+
+  .paper {
+    background: #ffffff;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 60px 70px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+    border-radius: 8px;
+  }
+
+  h1.main-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 40px;
+    color: #0f172a;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 20px;
+  }
+
+  h2.chapter-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 40px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 6px;
+  }
+
+  h3.section-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 24px;
+    margin-bottom: 10px;
+  }
+
+  h4.subsection-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 13.5px;
+    color: #334155;
+    margin: 0 0 12px 0;
+    text-align: justify;
+  }
+
+  ul {
+    margin: 0 0 16px 0;
+    padding-left: 24px;
+  }
+
+  li {
+    font-size: 13.5px;
+    color: #334155;
+    margin-bottom: 6px;
+  }
+
+  pre {
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 14px 16px;
+    font-family: 'JetBrains Mono', Consolas, monospace;
+    font-size: 12px;
+    color: #0f172a;
+    overflow-x: auto;
+    line-height: 1.45;
+    margin: 14px 0;
+  }
+
+  code {
+    font-family: 'JetBrains Mono', Consolas, monospace;
+    font-size: 12px;
+    background: #f1f5f9;
+    padding: 2px 5px;
+    border-radius: 4px;
+    color: #2563eb;
+  }
+
+  .print-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+    transition: all 0.2s;
+  }
+
+  .print-btn:hover {
+    background: #1d4ed8;
+  }
+
+  @media print {
+    body {
+      background-color: #ffffff;
+      padding: 0;
+    }
+    .paper {
+      box-shadow: none;
+      padding: 0;
+      max-width: 100%;
+    }
+    .print-btn {
+      display: none;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+  }
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+
+<div class="paper">
+  <h1 class="main-title">LABOUR.COM – SKILLED LABOUR MARKETPLACE</h1>
+
+  <!-- Chapter 1 -->
+  <h2 class="chapter-title">Chapter 1 – Introduction</h2>
+  <h3 class="section-title">1.1 Background</h3>
+  <p>In developing nations like Bangladesh, the informal manual and technical labour sector employs millions of skilled artisans, electricians, plumbers, masons, carpenters, painters, and general construction workers. Despite the high demand from households, contractors, and businesses, hiring daily-wage labour remains heavily disorganized. Traditional hiring relies on informal street corners ("Labour Haat") or unverified local intermediaries. This results in wage exploitation for workers, lack of safety compliance, zero accountability for work quality, and significant transaction friction for customers. The <strong>Labour.com Marketplace Platform</strong> bridges this gap by offering a transparent, digitalized, multi-broker marketplace connecting customers with verified labour agencies across all 8 administrative divisions of Bangladesh.</p>
+
+  <h3 class="section-title">1.2 Problem Statement</h3>
+  <p>The rapid growth of digital service platforms has highlighted the need for transparency in daily wage hiring. Finding verified, skilled, and reliable daily or contractual labourers on demand is extremely difficult for individuals and enterprises. Existing informal practices suffer from several critical shortcomings:</p>
+  <ul>
+    <li><strong>Lack of Transparency & Wage Gouging:</strong> Customers often encounter arbitrary price inflation, while labourers are frequently underpaid by unregistered intermediaries.</li>
+    <li><strong>Absence of Quality & Safety Accountability:</strong> No formal mechanisms exist to track worker credibility, skill certifications, or safety adherence.</li>
+    <li><strong>High Financial Risk & Payment Disputes:</strong> Informal cash transactions leave both parties vulnerable to unfulfilled jobs, sudden cancellations, or non-payment.</li>
+    <li><strong>Geographical Inefficiencies:</strong> Customers outside metropolitan areas struggle to discover organized labor pools in their respective districts and upazilas.</li>
+  </ul>
+  <p>The <strong>Labour.com Skilled Labour Marketplace</strong> addresses these challenges by providing a modern web platform featuring verified broker profiles with blue-tick trust badges, standard daily market rates, multi-worker selection, a fixed ৳500 dual-escrow deposit guarantee, dynamic bilingual support (Bengali & English), and AI-driven project budgeting and automated legal contract generation.</p>
+
+  <h3 class="section-title">1.3 Objectives</h3>
+  <ul>
+    <li>Connect customers with verified labour agencies across all 8 divisions of Bangladesh</li>
+    <li>Provide dynamic multi-worker booking with transparent daily rate calculations</li>
+    <li>Implement a ৳500 deposit escrow system to protect both customers and service providers</li>
+    <li>Generate AI-powered project cost estimations and automated digital labour contracts</li>
+    <li>Deliver a smart AI assistant chatbot and automated dispute/fraud prevention guard</li>
+    <li>Enable full bilingual localization (English and Bengali) for national accessibility</li>
+    <li>Provide dedicated Role-Based Access Control (RBAC) dashboards for Admins, Brokers, and Customers</li>
+  </ul>
+
+  <h3 class="section-title">1.4 Scope</h3>
+  <ul>
+    <li>User Authentication & Role Management</li>
+    <li>8-Division Geolocation Filtering & Trade Categories</li>
+    <li>Broker & Agency Worker Roster Showcase</li>
+    <li>Multi-Worker Booking & Escrow Flow</li>
+    <li>Multi-Channel Payment Gateway (bKash, Nagad, Rocket, Card)</li>
+    <li>AI Project Budget Estimator & Contract Generator</li>
+    <li>AI Chatbot & Smart Dispute Fraud Guard</li>
+    <li>Customer Reviews & Rating System</li>
+    <li>Admin Moderation Panel & Audit Logs</li>
+    <li>Cloud Deployment on Netlify and Render</li>
+  </ul>
+
+  <div class="page-break"></div>
+
+  <!-- Chapter 2 -->
+  <h2 class="chapter-title">Chapter 2 – Software Requirement Specification</h2>
+  <p>Software Requirement Specification (SRS) defines the functional and non-functional requirements of the <strong>Labour.com Marketplace Platform</strong> system. It describes what the system should do, including user authentication, agency management, booking workflows, AI integration, and financial data management. The SRS serves as a blueprint for developers, designers, and testers throughout the project. It ensures that all stakeholders have a clear understanding of the project's goals and expected features. A well-prepared SRS helps reduce development errors and improves software quality.</p>
+
+  <h3 class="section-title">Functional Requirements</h3>
+  <ul>
+    <li>User Registration (Customer, Broker, Admin roles)</li>
+    <li>Login & JWT Session Authentication</li>
+    <li>Profile & Agency Worker Management</li>
+    <li>8-Division & 64-District Search & Filtering</li>
+    <li>8 Trade Categories Navigation with Base Daily Rates</li>
+    <li>Multi-Worker Category Allocation Booking Modal</li>
+    <li>Fixed ৳500 Escrow Deposit Processing</li>
+    <li>Simulated Digital Payments (bKash, Nagad, Rocket, Card)</li>
+    <li>AI Cost & Time Estimator</li>
+    <li>AI Legal Labour Contract Generator</li>
+    <li>AI Support Chatbot Widget</li>
+    <li>AI Dispute & Fraud Guard</li>
+    <li>Customer Feedback & Star Ratings</li>
+    <li>Admin Agency Moderation & Blue-Tick Verification</li>
+    <li>1-Click English and Bengali Language Switch</li>
+  </ul>
+
+  <h3 class="section-title">Non-Functional Requirements</h3>
+  <ul>
+    <li>Responsive UI (Mobile, Tablet, Desktop)</li>
+    <li>Secure Authentication & Bcrypt Password Hashing</li>
+    <li>Fast Response Time (&lt; 200ms API latency)</li>
+    <li>Scalable Decoupled Architecture</li>
+    <li>High Availability (99.9% Cloud Uptime)</li>
+    <li>Maintainability & Modular Codebase</li>
+  </ul>
+
+  <h3 class="section-title">User Stories</h3>
+  <p><strong>Example:</strong><br>
+  <em>As a customer, I want to search for verified electrical and masonry agencies in Chittagong division and book 2 electricians with a secured ৳500 deposit so that I can get guaranteed on-time home wiring.</em></p>
+
+  <h3 class="section-title">Business Rules</h3>
+  <ul>
+    <li>Customers must pay a fixed ৳500 deposit into platform escrow to confirm a multi-worker booking.</li>
+    <li>Agencies automatically qualify for a "Verified Blue-Tick Badge" upon completing ≥ 5 jobs with an average rating ≥ 4.5 and managing ≥ 3 workers.</li>
+    <li>Bookings can only transition through authorized sequential states: <code>requested</code> &rarr; <code>accepted</code> &rarr; <code>in_progress</code> &rarr; <code>completed</code> / <code>cancelled</code>.</li>
+    <li>Customers can only review and rate agencies after a booking status reaches <code>completed</code>.</li>
+    <li>All financial transactions and contract generations are logged with immutable audit timestamps.</li>
+  </ul>
+
+  <div class="page-break"></div>
+
+  <!-- Chapter 3 -->
+  <h2 class="chapter-title">Chapter 3 – System Design</h2>
+  <p>System Design describes the overall structure and architecture of the <strong>Labour.com Marketplace Platform</strong>. It illustrates how the frontend, backend, database, and AI service interact to deliver the required functionalities. The design includes system architecture, database schema, API structure, and UML diagrams to ensure a scalable, secure, and maintainable application. A well-designed system improves performance, simplifies future enhancements, and supports efficient software development.</p>
+
+  <h3 class="section-title">Technology Stack</h3>
+  <h4 class="subsection-title">Frontend</h4>
+  <ul>
+    <li>Next.js (App Router)</li>
+    <li>TypeScript</li>
+    <li>Vanilla CSS & Custom Tokens</li>
+    <li>Lucide React Icons</li>
+    <li>React Context API (AuthContext, LanguageContext, DataContext)</li>
+    <li>Fetch API Client</li>
+  </ul>
+
+  <h4 class="subsection-title">Backend</h4>
+  <ul>
+    <li>Node.js</li>
+    <li>Express.js</li>
+    <li>CORS & Helmet Security Middleware</li>
+    <li>JSON Web Token (JWT) & bcrypt.js</li>
+  </ul>
+
+  <h4 class="subsection-title">Database</h4>
+  <ul>
+    <li>MongoDB Atlas (Cloud Database)</li>
+    <li>Mongoose ODM</li>
+  </ul>
+
+  <h4 class="subsection-title">AI & Intelligent Services</h4>
+  <ul>
+    <li>AI Labour Rate Estimation Engine</li>
+    <li>AI Legal Labour Contract Generator</li>
+    <li>Rule-Based AI Support Chatbot</li>
+    <li>AI Fraud Guard & Booking Anomaly Detector</li>
+  </ul>
+
+  <h3 class="section-title">System Architecture</h3>
+  <pre>
+User (Browser / Mobile)
+        ↓
+Next.js Frontend (Netlify CDN / Edge)
+        ↓
+Express.js REST API (Render Cloud Service)
+        ↓
+JWT & Role-Based Access Control (RBAC)
+        ↓
+AI Services (Estimator, Contract Gen, Fraud Guard)
+        ↓
+MongoDB Atlas Cloud Database (Mongoose ODM)</pre>
+
+  <h3 class="section-title">Database Tables / Collections</h3>
+  <ul>
+    <li><strong>Users:</strong> Authentication credentials, roles (customer, broker, admin), profile details.</li>
+    <li><strong>Brokers:</strong> Agency profile, location (division, district), worker roster, verification status, rating.</li>
+    <li><strong>Bookings:</strong> Booking transactions, selected trade counts, dates, ৳500 deposit, escrow status.</li>
+    <li><strong>Reviews:</strong> Customer ratings (1-5 stars), feedback comments, timestamps.</li>
+  </ul>
+
+  <h3 class="section-title">ER Diagram</h3>
+  <pre>
++------------------+         1 : N         +-------------------+
+|      USERS       | --------------------> |     BOOKINGS      |
+|------------------|                       |-------------------|
+| _id (PK)         |                       | _id (PK)          |
+| name, email      |                       | customerId (FK)   |
+| password, role   |                       | brokerId (FK)     |
+| phone            |                       | trades, date      |
++------------------+                       | deposit (500 BDT) |
+         | 1                               | status            |
+         |                                 +-------------------+
+         v 1                                         | 1
++------------------+         1 : N                   v 1
+|     BROKERS      | --------------------> +-------------------+
+|------------------|                       |      REVIEWS      |
+| _id (PK)         |                       |-------------------|
+| userId (FK)      |                       | _id (PK)          |
+| agencyName       |                       | brokerId (FK)     |
+| division, dist   |                       | rating, comment   |
+| workers [], rate |                       +-------------------+
++------------------+</pre>
+
+  <p><strong>Relationships:</strong><br>
+  Users &mdash; Roles<br>
+  Brokers &mdash; Workers<br>
+  Customers &mdash; Bookings<br>
+  Bookings &mdash; Escrow / Reviews</p>
+
+  <h3 class="section-title">UML Diagrams</h3>
+  <ul>
+    <li>Use Case Diagram</li>
+    <li>Class Diagram</li>
+    <li>Activity Diagram</li>
+    <li>Sequence Diagram</li>
+  </ul>
+
+  <div class="page-break"></div>
+
+  <!-- Chapter 4 -->
+  <h2 class="chapter-title">Chapter 4 – System Implementation</h2>
+  <p>System Implementation explains how the <strong>Labour.com Marketplace Platform</strong> is developed using the selected technologies and software architecture. It covers the implementation of the frontend, backend, database, authentication, and AI integration to ensure all system requirements are met. This phase transforms the system design into a fully functional web application with secure, scalable, and user-friendly features. Proper implementation ensures reliable performance, maintainability, and successful deployment.</p>
+
+  <h3 class="section-title">Frontend</h3>
+  <ul>
+    <li>Responsive Design & Modern Glassmorphism Theme</li>
+    <li>Authentication Pages (<code>/auth/login</code>, <code>/auth/register</code>)</li>
+    <li>Admin, Broker, and Customer Dashboards</li>
+    <li>8-Division Location Search & Trade Filter Form</li>
+    <li>Agency Profile & Worker Cards</li>
+    <li>Multi-Worker Category Increment Booking Modal</li>
+    <li>bKash, Nagad, Rocket Digital Payment Modal</li>
+    <li>AI Cost Estimator & Contract Generator Modals</li>
+    <li>AI Chatbot Floating Widget</li>
+  </ul>
+
+  <h3 class="section-title">Backend</h3>
+  <p><strong>REST APIs:</strong></p>
+  <ul>
+    <li><code>POST /api/auth/register</code></li>
+    <li><code>POST /api/auth/login</code></li>
+    <li><code>GET  /api/brokers</code></li>
+    <li><code>GET  /api/brokers/:id</code></li>
+    <li><code>POST /api/bookings</code></li>
+    <li><code>GET  /api/bookings</code></li>
+    <li><code>POST /api/payments</code></li>
+    <li><code>POST /api/reviews</code></li>
+    <li><code>GET  /api/reviews</code></li>
+  </ul>
+
+  <h3 class="section-title">AI Integration</h3>
+  <p>AI Integration services return:</p>
+  <ul>
+    <li>Daily Rate Calculation</li>
+    <li>Total Estimated Project Cost</li>
+    <li>Required ৳500 Escrow Deposit</li>
+    <li>Estimated Project Working Hours</li>
+    <li>Legally Structured Contract Terms & Safety Clauses</li>
+    <li>Automated Customer Support Chat Answers</li>
+    <li>Booking Anomaly & Fraud Risk Scores</li>
+  </ul>
+  <p>The system clearly informs users that the AI output provides intelligent estimation and advisory contract templates for transparent work coordination.</p>
+
+  <p>Here is a comprehensive breakdown of the core code functionalities in this project, complete with code snippets and detailed explanations.</p>
+
+  <h4 class="subsection-title">1. Multi-Tier AI Labour Cost Estimator & Contract Generator</h4>
+  <p>The core algorithmic intelligence for project wage estimation and automated digital contract generation resides in <code>frontend/lib/ai/aiService.ts</code>.</p>
+  <pre>
+// File: frontend/lib/ai/aiService.ts
+export function calculateAIEstimate(params: CostEstimateParams) {
+  const baseRates: Record&lt;string, number&gt; = {
+    Electrician: 900, Plumber: 850, Mason: 950, Carpenter: 800,
+    Painter: 750, Welder: 1000, Driver: 700, Labourer: 600,
+  };
+  const dailyRate = baseRates[params.category] || 700;
+  const complexityMultiplier = params.projectComplexity === 'Complex' ? 1.25 :
+    params.projectComplexity === 'Simple' ? 0.9 : 1.0;
+  const estimatedTotal = Math.round(
+    dailyRate * params.workerCount * params.durationDays * complexityMultiplier
+  );
+  const deposit = 500;
+  const balance = estimatedTotal - deposit;
+  return { dailyRate, estimatedTotal, deposit, balance, estimatedHours: params.durationDays * 8 };
+}</pre>
+
+  <h4 class="subsection-title">2. Multi-Worker Booking Modal & Escrow Logic</h4>
+  <p>Handling dynamic multi-category worker allocations and automatic ৳500 deposit calculation in <code>frontend/components/modals/BookingModal.tsx</code>:</p>
+  <pre>
+// File: frontend/components/modals/BookingModal.tsx
+const handleConfirmBooking = async () => {
+  const payload = {
+    brokerId: broker._id,
+    customerId: user?.id,
+    trades: selectedTrades,
+    totalWorkers: totalWorkerCount,
+    bookingDate, locationAddress,
+    depositAmount: 500,
+    status: 'requested',
+  };
+  await fetch('/api/bookings', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });
+};</pre>
+
+  <h4 class="subsection-title">3. Role-Based Access Control (RBAC) Authentication</h4>
+  <p>User authentication and role routing in <code>frontend/lib/context/AuthContext.tsx</code>:</p>
+  <pre>
+// File: frontend/lib/context/AuthContext.tsx
+export const AuthProvider = ({ children }: { children: ReactNode }) => {
+  const login = (userData: User, token: string) => {
+    localStorage.setItem('token', token);
+    localStorage.setItem('user', JSON.stringify(userData));
+    setUser(userData);
+    if (userData.role === 'admin') router.push('/dashboard/admin');
+    else if (userData.role === 'broker') router.push('/dashboard/broker');
+    else router.push('/dashboard/customer');
+  };
+  return &lt;AuthContext.Provider value={{ user, login, logout }}&gt;{children}&lt;/AuthContext.Provider&gt;;
+};</pre>
+
+  <h4 class="subsection-title">4. Express Server & Cloud Security Pipeline</h4>
+  <p>The HTTP pipeline is configured in <code>backend/server.js</code> with standard security practices including Helmet, CORS, and MongoDB Atlas connectivity:</p>
+  <pre>
+// File: backend/server.js
+const app = express();
+app.use(helmet());
+app.use(cors());
+app.use(express.json());
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log('MongoDB Atlas Connected successfully'));
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/brokers', require('./routes/brokers'));
+app.use('/api/bookings', require('./routes/bookings'));
+app.use('/api/reviews', require('./routes/reviews'));</pre>
+
+  <h4 class="subsection-title">5. Frontend Bilingual Localization (English & Bengali)</h4>
+  <p>Language dictionary tokens in <code>frontend/lib/i18n/translations.ts</code>:</p>
+  <pre>
+// File: frontend/lib/i18n/translations.ts
+export const translations = {
+  en: {
+    heroTitle: 'Find Verified Skilled Labour in Bangladesh',
+    searchBtn: 'Search Agencies',
+    depositNotice: 'Fixed ৳500 deposit required to secure booking.'
+  },
+  bn: {
+    heroTitle: 'বাংলাদেশে বিশ্বস্ত ও দক্ষ শ্রমিক খুঁজে নিন',
+    searchBtn: 'এজেন্সি খুঁজুন',
+    depositNotice: 'বুকিং নিশ্চিত করতে নির্ধারিত ৳৫০০ জামানত প্রযোজ্য।'
+  }
+};</pre>
+
+  <div class="page-break"></div>
+
+  <!-- Chapter 5 -->
+  <h2 class="chapter-title">Chapter 5 – Security, Testing & Deployment</h2>
+  <p>Security, Testing & Deployment ensures that the <strong>Labour.com Marketplace Platform</strong> is secure, reliable, and ready for real-world use. Security features such as JWT authentication, password hashing, input validation, and rate limiting protect the application from common threats. Testing is performed using Jest and Supertest to verify system functionality, API performance, and overall reliability. Finally, the application is deployed on cloud platforms, making it accessible, scalable, and easy to maintain.</p>
+
+  <h3 class="section-title">Security</h3>
+  <ul>
+    <li>JWT Authentication</li>
+    <li>Password Hashing (bcrypt)</li>
+    <li>Role-Based Authorization (RBAC)</li>
+    <li>Dual-Escrow ৳500 Deposit Protection</li>
+    <li>Helmet HTTP Security Headers</li>
+    <li>CORS Protection</li>
+    <li>Input Validation & NoSQL Injection Protection</li>
+    <li>Environment Variables</li>
+  </ul>
+
+  <h3 class="section-title">Testing</h3>
+  <h4 class="subsection-title">Tools</h4>
+  <ul>
+    <li>Jest</li>
+    <li>Supertest</li>
+  </ul>
+
+  <h4 class="subsection-title">Coverage</h4>
+  <ul>
+    <li>Unit Tests</li>
+    <li>API Tests</li>
+    <li>Authentication & RBAC Tests</li>
+    <li>Booking & Escrow Tests</li>
+    <li>Dashboard Tests</li>
+  </ul>
+  <p><strong>Target Coverage: 85%</strong></p>
+
+  <h3 class="section-title">Deployment</h3>
+  <h4 class="subsection-title">Frontend</h4>
+  <ul>
+    <li><strong>Netlify</strong> (with <code>@netlify/plugin-nextjs</code> & Global Edge CDN)</li>
+  </ul>
+
+  <h4 class="subsection-title">Backend</h4>
+  <ul>
+    <li><strong>Render</strong> (Node.js Web Service on Port 10000)</li>
+  </ul>
+
+  <h4 class="subsection-title">Database</h4>
+  <ul>
+    <li><strong>MongoDB Atlas</strong> (Cloud Database)</li>
+  </ul>
+
+  <div class="page-break"></div>
+
+  <!-- Chapter 6 -->
+  <h2 class="chapter-title">Chapter 6 – Conclusion</h2>
+  <p>The <strong>Labour.com Marketplace Platform</strong> provides users with an AI-assisted way to discover, evaluate, and hire verified skilled labour agencies across Bangladesh. By integrating 8-division geolocation search, dynamic multi-worker booking, a ৳500 dual-escrow deposit model, full bilingual accessibility (Bangla & English), and AI-driven budgeting and automated labour contracts, the platform promotes transparent, reliable, and safe hiring for both clients and artisans.</p>
+
+  <h3 class="section-title">Future Work</h3>
+  <ul>
+    <li>Multilingual & Regional Dialect Support</li>
+    <li>Mobile Application (React Native Android & iOS)</li>
+    <li>Real-time GPS Worker Tracking</li>
+    <li>Biometric Government NID Verification API</li>
+    <li>Blockchain Smart Contract Escrow System</li>
+    <li>Bangla Voice-Based Search</li>
+  </ul>
+
+  <!-- References -->
+  <h2 class="chapter-title">References</h2>
+  <p>1. Next.js Documentation (https://nextjs.org/docs)<br>
+  2. Express.js Documentation (https://expressjs.com/)<br>
+  3. MongoDB Atlas & Mongoose Documentation (https://mongoosejs.com/)<br>
+  4. JWT (JSON Web Token) Documentation (https://jwt.io/)<br>
+  5. Netlify Documentation (https://docs.netlify.com/)<br>
+  6. Render Platform Documentation (https://render.com/docs)<br>
+  7. React Documentation (https://react.dev/)<br>
+  8. Bangladesh Bureau of Statistics (Labour Force Survey)</p>
+</div>
+
+</body>
+</html>
