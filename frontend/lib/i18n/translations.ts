@@ -1,0 +1,262 @@
+export type Language = 'en' | 'bn';
+
+export const TRANSLATIONS = {
+  en: {
+    // Header & Navigation
+    navHome: 'Home',
+    navSearch: 'Find Brokers',
+    navServices: 'Categories',
+    navDashboard: 'Dashboard',
+    navLogin: 'Login',
+    navRegister: 'Register',
+    navLogout: 'Logout',
+    roleCustomer: 'Customer',
+    roleBroker: 'Broker',
+    roleAdmin: 'Admin',
+    switchRole: 'Switch Demo Role',
+
+    // Hero & Search
+    heroTitle: 'Bangladesh’s Premier Broker-Mediated Labour Marketplace',
+    heroSubtitle: 'Connect with verified local brokers across 8 Divisions & 64 Districts to hire trusted labourers, electricians, plumbers, masons & technicians.',
+    searchDivision: 'Select Division',
+    searchDistrict: 'Select District',
+    searchUpazila: 'Select Upazila',
+    searchCategory: 'All Service Categories',
+    searchKeyword: 'Search by broker name, service, or location...',
+    searchButton: 'Search Brokers',
+    allDivisions: 'All Divisions',
+    allDistricts: 'All Districts',
+    allUpazilas: 'All Upazilas',
+    clearFilters: 'Clear Filters',
+    resultsFound: 'brokers found',
+
+    // Broker Listing
+    verifiedBroker: 'Verified Broker',
+    workersAvailable: 'Workers Managed',
+    primaryServices: 'Primary Services',
+    viewProfile: 'View Profile & Workforce',
+    bookBrokerNow: 'Book Now',
+    ratingLabel: 'Rating',
+    reviewsCount: 'reviews',
+    noBrokersFound: 'No brokers match your filter criteria. Try expanding your search area.',
+
+    // Broker Profile Page
+    brokerProfileTitle: 'Broker Details & Available Workforce',
+    locationLabel: 'Operating Location',
+    contactLabel: 'Contact Information',
+    phoneLabel: 'Phone',
+    emailLabel: 'Email',
+    workersByCategory: 'Available Workforce by Role',
+    hourlyRate: 'Hourly Rate',
+    dailyRate: 'Daily Rate',
+    expYears: 'yrs exp',
+    statusAvailable: 'Available Now',
+    statusBusy: 'Currently On Job',
+    addWorkerBtn: '+ Add New Worker',
+    customerReviewsTitle: 'Customer Ratings & Reviews',
+    writeReviewBtn: 'Write a Review',
+
+    // Booking & Escrow Flow
+    bookingModalTitle: 'Initiate Booking Request',
+    bookingSubtitle: 'Submit your job requirements. You will be prompted to pay ৳500 advance deposit.',
+    workCategoryLabel: 'Required Service Role',
+    workerCountLabel: 'Number of Workers Needed',
+    jobDetailsLabel: 'Job Description & Instructions',
+    jobDetailsPlaceholder: 'Describe the work (e.g. Electrical wiring for 3-room apartment, plumbing leak repair, site cleaning)...',
+    workDateLabel: 'Service Date',
+    addressLabel: 'Worksite Full Address',
+    
+    // Deposit / Escrow Notices
+    depositNoticeTitle: 'Advance Deposit Notice (৳500)',
+    depositNoticeRefundable: 'You will pay an advance deposit of ৳500 via Labour.com. Upon broker confirmation, this ৳500 is IMMEDIATELY REFUNDED to you. You then negotiate the final total offline and pay into Labour.com Escrow.',
+    depositNoticeFee: 'You will pay a non-refundable booking service fee of ৳500 to confirm this request with the broker.',
+    submitAndPayDeposit: 'Submit & Pay ৳500 Advance',
+    payDepositHeading: 'Pay ৳500 Deposit',
+    paymentSuccessMsg: 'Your request has been submitted. Please pay ৳500 advance.',
+    depositRefundedMsg: 'Broker confirmed. ৳500 has been refunded to you.',
+    finalPaymentNotice: 'Complete the payment to release funds.',
+    payFinalEscrow: 'Pay Agreed Total (Escrow)',
+    markJobComplete: 'Mark Job Complete & Release Funds',
+    payoutReleasedMsg: 'Payment released to broker. Thank you for using Labour.com!',
+
+    // Payment Gateway Simulation
+    selectPaymentMethod: 'Select Payment Method in Bangladesh',
+    bKash: 'bKash (ব্র্যাক ব্যাংক)',
+    nagad: 'Nagad (বাংলাদেশ ডাক বিভাগ)',
+    rocket: 'Dutch-Bangla Rocket',
+    card: 'Debit / Credit Card',
+    enterBkashNum: 'Enter Mobile Banking Account Number',
+    payNowBtn: 'Pay ৳',
+    processingPayment: 'Securing Payment in Escrow...',
+
+    // Customer Dashboard
+    custDashTitle: 'Customer Dashboard',
+    myBookings: 'My Bookings & Escrow Tracker',
+    myFavorites: 'Favorite Brokers',
+    totalEscrowSpent: 'Total Payments',
+    activeBookingsCount: 'Active Jobs',
+    bookingId: 'Booking ID',
+    statusPending: 'Pending Broker Confirmation',
+    statusConfirmed: 'Broker Confirmed (৳500 Refunded)',
+    statusCompleted: 'Work Completed',
+    statusCancelled: 'Cancelled',
+    payFinalBtn: 'Pay Final (৳)',
+
+    // Broker Dashboard
+    brokerDashTitle: 'Broker Management Portal',
+    managedWorkers: 'Managed Worker Catalog',
+    incomingRequests: 'Incoming Booking Requests',
+    totalEarnings: 'Total Payout Earnings',
+    confirmBookingBtn: 'Confirm Job Request',
+    newWorkerName: 'Worker Full Name',
+    newWorkerCategory: 'Skill Category',
+    newWorkerDailyRate: 'Daily Rate (৳)',
+    newWorkerExp: 'Experience (Years)',
+    saveWorkerBtn: 'Save Worker',
+
+    // Admin Dashboard
+    adminDashTitle: 'Platform Master Administration',
+    platformAnalytics: 'Marketplace Metrics & Regional Analytics',
+    bookingsPerRegion: 'Bookings by Division',
+    totalEscrowVolume: 'Escrow Volume Processed',
+    depositModeSetting: 'Deposit Escrow Business Model',
+    modeRefundableOpt: 'Refundable Deposit (Recommended)',
+    modeFeeOpt: 'Non-Refundable ৳500 Service Fee',
+    saveSettingsBtn: 'Update System Settings',
+    allUsersTable: 'Registered Users & Brokers',
+
+    // Toast & Modals
+    closeModal: 'Close',
+    successTitle: 'Success',
+    currencySymbol: '৳'
+  },
+  bn: {
+    // Header & Navigation
+    navHome: 'হোম',
+    navSearch: 'ব্রোকার খুঁজুন',
+    navServices: 'ক্যাটাগরি',
+    navDashboard: 'ড্যাশবোর্ড',
+    navLogin: 'লগইন',
+    navRegister: 'রেজিস্টার',
+    navLogout: 'লগআউট',
+    roleCustomer: 'গ্রাহক',
+    roleBroker: 'ব্রোকার',
+    roleAdmin: 'এডমিন',
+    switchRole: 'ডেমো রোল পরিবর্তন করুন',
+
+    // Hero & Search
+    heroTitle: 'বাংলাদেশের বিশ্বস্ত ব্রোকার-ভিত্তিক লেবার মার্কেটপ্লেস',
+    heroSubtitle: '৮টি বিভাগ ও ৬৪টি জেলার স্থানীয় ব্রোকারদের সাথে যুক্ত হয়ে অভিজ্ঞ শ্রমিক, ইলেকট্রিশিয়ান, প্লাম্বার, রাজমিস্ত্রি ও টেকনিশিয়ান বুক করুন।',
+    searchDivision: 'বিভাগ নির্বাচন করুন',
+    searchDistrict: 'জেলা নির্বাচন করুন',
+    searchUpazila: 'উপজেলা নির্বাচন করুন',
+    searchCategory: 'সকল সেবা ক্যাটাগরি',
+    searchKeyword: 'ব্রোকারের নাম, সেবা বা এলাকা দিয়ে খুঁজুন...',
+    searchButton: 'ব্রোকার খুঁজুন',
+    allDivisions: 'সকল বিভাগ',
+    allDistricts: 'সকল জেলা',
+    allUpazilas: 'সকল উপজেলা',
+    clearFilters: 'ফিল্টার মুছুন',
+    resultsFound: 'জন ব্রোকার পাওয়া গেছে',
+
+    // Broker Listing
+    verifiedBroker: 'যাচাইকৃত ব্রোকার',
+    workersAvailable: 'অধীনস্থ শ্রমিক সংখ্যা',
+    primaryServices: 'প্রধান সেবাসমূহ',
+    viewProfile: 'প্রোফাইল ও শ্রমিক তালিকা দেখুন',
+    bookBrokerNow: 'বুক করুন',
+    ratingLabel: 'রেটিং',
+    reviewsCount: 'টি রিভিউ',
+    noBrokersFound: 'আপনার ফিল্টারের সাথে কোনো ব্রোকার মেলেনি। অনুগ্রহ করে অনুসন্ধানের এলাকা পরিবর্তন করুন।',
+
+    // Broker Profile Page
+    brokerProfileTitle: 'ব্রোকারের বিস্তারিত ও শ্রমিক তালিকা',
+    locationLabel: 'কার্যক্রম এলাকা',
+    contactLabel: 'যোগাযোগের তথ্য',
+    phoneLabel: 'ফোন নম্বর',
+    emailLabel: 'ইমেইল',
+    workersByCategory: 'ক্যাটাগরি অনুযায়ী শ্রমিক তালিকা',
+    hourlyRate: 'ঘণ্টাপ্রতি রেট',
+    dailyRate: 'দৈনিক রেট',
+    expYears: 'বছরের অভিজ্ঞতা',
+    statusAvailable: 'এখন খালি আছেন',
+    statusBusy: 'কাজে নিয়োজিত',
+    addWorkerBtn: '+ নতুন শ্রমিক যুক্ত করুন',
+    customerReviewsTitle: 'গ্রাহক রেটিং ও রিভিউ',
+    writeReviewBtn: 'রিভিউ লিখুন',
+
+    // Booking & Escrow Flow
+    bookingModalTitle: 'বুকিং অনুরোধ পাঠান',
+    bookingSubtitle: 'কাজের বিবরণ দিন। পরবর্তী ধাপে আপনাকে ৳৫০০ অগ্রিম প্রদান করতে বলা হবে।',
+    workCategoryLabel: 'প্রয়োজনীয় সেবা',
+    workerCountLabel: 'প্রয়োজনীয় শ্রমিক সংখ্যা',
+    jobDetailsLabel: 'কাজের বিস্তারিত বিবরণ',
+    jobDetailsPlaceholder: 'কাজের ধরন লিখুন (যেমন: ৩ রুমের ফ্ল্যাটের ইলেকট্রিক ওয়্যারিং, লিকিং পাইপ মেরামত, সাইট পরিচ্ছন্নতা)...',
+    workDateLabel: 'কাজের তারিখ',
+    addressLabel: 'কাজের সম্পূর্ণ ঠিকানা',
+
+    // Deposit / Escrow Notices
+    depositNoticeTitle: 'অগ্রিম ডিপোজিট সংক্রান্ত নোটিশ (৳৫০০)',
+    depositNoticeRefundable: 'লেবার.কম এর মাধ্যমে ৫০০ টাকা অগ্রিম প্রদান করবেন। ব্রোকার আপনার কাজ নিশ্চিত করলে এই ৫০০ টাকা তাৎক্ষণিকভাবে আপনার অ্যাকাউন্টে ফেরত দেওয়া হবে।',
+    depositNoticeFee: 'ব্রোকার বুকিং নিশ্চিত করার জন্য ৫০০ টাকা অ-ফেরতযোগ্য সার্ভিস ফি প্রদান করুন।',
+    submitAndPayDeposit: 'জমা দিন ও ৳৫০০ অগ্রিম দিন',
+    payDepositHeading: '৳৫০০ অগ্রিম প্রদান করুন',
+    paymentSuccessMsg: 'আপনার অনুরোধ জমা হয়েছে। দয়া করে ৳৫০০ অগ্রিম প্রদান করুন।',
+    depositRefundedMsg: 'ব্রোকার নিশ্চিত করেছেন। ৳৫০০ আপনার কাছে ফেরত দেওয়া হয়েছে।',
+    finalPaymentNotice: 'টাকা মুক্তি পেতে অর্থ প্রদান সম্পন্ন করুন।',
+    payFinalEscrow: 'চুক্তিকৃত টাকা পরিশোধ করুন (এসক্রো)',
+    markJobComplete: 'কাজ সম্পন্ন ঘোষণা করুন ও টাকা প্রদান করুন',
+    payoutReleasedMsg: 'ব্রোকারকে টাকা বুঝিয়ে দেওয়া হয়েছে। লেবার.কম ব্যবহারের জন্য ধন্যবাদ!',
+
+    // Payment Gateway Simulation
+    selectPaymentMethod: 'পেমেন্ট মাধ্যম নির্বাচন করুন',
+    bKash: 'বিকাশ (BRAC Bank)',
+    nagad: 'নগদ (বাংলাদেশ ডাক বিভাগ)',
+    rocket: 'ডাচ-বাংলা রকেট',
+    card: 'ডেবিট / ক্রেডিট কার্ড',
+    enterBkashNum: 'মোবাইল ব্যাংকিং অ্যাকাউন্ট নম্বর দিন',
+    payNowBtn: 'পেমেন্ট করুন ৳',
+    processingPayment: 'এসক্রো নিরাপত্তা পেমেন্ট প্রসেস হচ্ছে...',
+
+    // Customer Dashboard
+    custDashTitle: 'গ্রাহক ড্যাশবোর্ড',
+    myBookings: 'আমার বুকিং ও এসক্রো ট্র্যাকার',
+    myFavorites: 'পছন্দের ব্রোকারসমূহ',
+    totalEscrowSpent: 'মোট খরচ (৳)',
+    activeBookingsCount: 'চলমান কাজ',
+    bookingId: 'বুকিং আইডেন্টিটি',
+    statusPending: 'ব্রোকার কনফার্মেশনের অপেক্ষায়',
+    statusConfirmed: 'ব্রোকার নিশ্চিত করেছেন (৳৫০০ ফেরত হয়েছে)',
+    statusCompleted: 'কাজ সম্পন্ন',
+    statusCancelled: 'বাতিলকৃত',
+    payFinalBtn: 'চূড়ান্ত পরিশোধ (৳)',
+
+    // Broker Dashboard
+    brokerDashTitle: 'ব্রোকার কন্ট্রোল প্যানেল',
+    managedWorkers: 'অধীনস্থ শ্রমিক তালিকা',
+    incomingRequests: 'নতুন বুকিং অনুরোধসমূহ',
+    totalEarnings: 'মোট আয় (৳)',
+    confirmBookingBtn: 'কাজ কনফার্ম করুন',
+    newWorkerName: 'শ্রমিকের পুরো নাম',
+    newWorkerCategory: 'দক্ষতার ক্যাটাগরি',
+    newWorkerDailyRate: 'দৈনিক মজুরি (৳)',
+    newWorkerExp: 'অভিজ্ঞতা (বছর)',
+    saveWorkerBtn: 'শ্রমিক সংরক্ষণ করুন',
+
+    // Admin Dashboard
+    adminDashTitle: 'প্ল্যাটফর্ম মাস্টার এডমিন',
+    platformAnalytics: 'মার্কেটপ্লেস মেট্রিক্স ও আঞ্চলিক এনালিটিক্স',
+    bookingsPerRegion: 'বিভাগ অনুযায়ী বুকিং',
+    totalEscrowVolume: 'মোট এসক্রো ভলিউম (৳)',
+    depositModeSetting: 'অগ্রিম ডিপোজিট বিজনেস মডেল',
+    modeRefundableOpt: 'ফেরতযোগ্য ডিপোজিট (সুপারিশকৃত)',
+    modeFeeOpt: 'অ-ফেরতযোগ্য ৳৫০০ সার্ভিস চার্জ',
+    saveSettingsBtn: 'সেটিংস আপডেট করুন',
+    allUsersTable: 'নিবন্ধিত ইউজার ও ব্রোকার তালিকা',
+
+    // Toast & Modals
+    closeModal: 'বন্ধ করুন',
+    successTitle: 'সফলতা',
+    currencySymbol: '৳'
+  }
+};
